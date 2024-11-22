@@ -5,92 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google_Meet</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
-<style>
-    .container {
-        height: 850px;
-        width: 500px;
-        margin: 70px auto;
-        border: 4px solid #8bd3dd;
-        background-color: #fef6e4;
-        border-radius: 20px;
-        box-shadow: 0px 0px 5px 5px #8bd3dd;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    .close {
-        height: 25px;
-        width: 25px;
-        margin-left: 450px;
-        padding: 10px;
-    }
-
-    h1 {
-        color: #001858;
-        font-size: 25px;
-        margin-left: 20px;
-    }
-
-    .btn_container {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .btn {
-        background-color: #8bd3dd;
-        height: 40px;
-        width: 150px;
-        border-radius: 20px;
-        padding: 10px;
-        border: none;
-        margin-top: 10px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .btn:hover {
-        transform: scale(1.1);
-    }
-
-    .symbol {
-        height: 20px;
-        width: 20px;
-    }
-
-    .input_Box {
-        height: 50px;
-        width: 420px;
-        margin: 25px 35px;
-        border-radius: 25px;
-        padding: 10px;
-        background-color: transparent;
-        font-size: 20px;
-    }
-
-    .meeting_text {
-        font-size: 15px;
-        margin-left: 15px;
-        color: #001858;
-    }
-
-    .name_card {
-        height: 30px;
-        width: 430px;
-        border: 3px solid #8bd3dd;
-        color: #001858;
-        margin: 20px;
-        text-align: center;
-        padding: 10px;
-        border-radius: 20px;
-        cursor: pointer;
-    }
-
-    .name_card:hover {
-        transform: scale(0.9);
-        box-shadow: 0px 0px 3px 3px #8bd3dd;
-    }
-</style>
-
 <body>
     <div class="container">
         <span class="cross">
@@ -110,40 +26,6 @@
         </span>
         <div id="search_container"></div>
     </div>
-
-    <script>
-        const names = [
-            "Nidhi",
-            "Siddhi",
-            "Krishna",
-            "Sunder",
-            "Bhoomika",
-            "Komal",
-            "Ajay",
-        ]
-        const search_container = document.getElementById('search_container');
-
-        names.forEach((name) => {
-            search_container.innerHTML += `<div class='name_card'> ${name}</div>`
-        });
-
-        function loadsearch() {
-            const inputelement = document.getElementById('input_Box');
-            const searchText = inputelement.value.toLowerCase();
-
-            search_container.innerHTML = "";
-
-            const filterednames = names.filter((name) => {
-                if (name.toLowerCase().includes(searchText)) {
-                    return true;
-                }
-            });
-
-            filterednames.forEach((name) => {
-                search_container.innerHTML += `<div class = 'name_card'>  ${name} </div>`
-            })
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
