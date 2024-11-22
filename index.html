@@ -14,7 +14,6 @@
         background-color: #fef6e4;
         border-radius: 20px;
         box-shadow: 0px 0px 5px 5px #8bd3dd;
-        padding: 10px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     .close{
@@ -26,6 +25,7 @@
     h1{
         color:#001858;
         font-size: 25px;
+        margin-left: 20px;
     }
     .btn_container{
         display: flex;
@@ -50,7 +50,18 @@
         width: 20px;
     }
     .input_Box{
-        height: 3;
+        height: 50px;
+        width: 420px;
+        margin: 25px 35px;
+        border-radius: 25px;
+        padding: 10px;
+        background-color: transparent;
+        font-size: 20px;
+    }
+    .meeting_text{
+        font-size: 15px;
+        margin-left: 15px;
+        color: #001858;
     }
 </style>
 <body>
@@ -66,6 +77,7 @@
         <span>
             <input type="search" class="input_Box" placeholder="Search for People"/>
         </span>
+        <span><p class="meeting_text">IN MEETING</p></span>
     </div>
 </body>
 </html>
